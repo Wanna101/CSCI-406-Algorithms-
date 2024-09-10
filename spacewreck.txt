@@ -1,0 +1,67 @@
+According to the example:
+Colors:
+-visited_state (undiscovered, discovered, explored)
+-node_color (red, green)
+
+R_s = 1
+L_s = 2
+Enqueue(Q, R_s)
+R_c = node_color[current[L_s]]
+for each v adjacency tuple to adjacencies[R_s]
+    if (v[1] == R_c)
+        if (visited_state[v] == WHITE) then
+            visited_state[v] = GRAY
+            d[v] = d[u] + 1
+            parent[v] = u
+            Enqueue(R, v)
+    else 
+        Enqueue(Q, L_s)
+
+
+   1   2   3   4   5   6   7
+P  2  nil  1   1   3       5 
+
+L 1
+L 3
+L 5
+L 7
+R 4
+
+
+-------//---------
+PSEUDOCODE
+- Read File
+   - colors_of_rooms = []
+   - line = input().split()
+   - number_of_rooms = int(line[0])
+   - number_of_corridors = int(line[1])
+   - line = input().split()
+   - for i in range(number_of_rooms - 1):
+        - colors_of_rooms.append(line[i])
+   - line = input().split()
+   - rocket_initial = int(line[0]) - 1
+   - lucky_initial = int(line[1]) - 1
+
+- Adjacency List (array of tuples):
+for 
+
+- Adjacency[1] = [ (3,'G') (4,'G') ] .... adjacency[7]
+- Build States for adjacency List
+- iterate adjacency structure (check all permutations) and check for colors (node with link)
+
+Start state:
+- rocket_initial
+- lucky_initial
+
+// generating all states
+for i in range(number_of_rooms):
+    for j in range(number_of_rooms):
+        if i's (link color of the tuple of the adjacency list) corridor color == j's node_color
+
+
+- Generate states through adjacencies
+
+
+
+
+
